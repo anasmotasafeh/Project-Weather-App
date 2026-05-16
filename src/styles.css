@@ -43,6 +43,10 @@ div.cond{
   font-weight: 900;
 }
 
+.temp {
+
+}
+
 body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
@@ -110,6 +114,7 @@ div {
   color: #2d3436;
 }
 
+.temp,
 .cond,
 span {
   font-weight: bold;
