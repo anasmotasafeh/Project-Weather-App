@@ -1,5 +1,55 @@
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 12px; /* Less padding on phone edges */
+    gap: 16px;
+  }
+
+  /* 1. Stack the form elements vertically on mobile */
+  form {
+    flex-direction: column; 
+    width: 100%;
+    max-width: 360px;
+    align-items: stretch; /* Makes input and button the exact same width */
+    gap: 12px;
+    padding: 16px;
+  }
+
+  input, button {
+    width: 100%; /* Stretch out to fill the form */
+    padding: 12px; /* Slightly larger tapping area for thumbs */
+    text-align: center;
+  }
+
+  /* 2. Adjust the container items so they stay perfectly centered */
+  #container {
+    width: 100%;
+    gap: 12px;
+  }
+
+  /* 3. Make your cards swallow the width safely */
+  .weather {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 18px;
+  }
+
+  .cond {
+    font-size: x-large; /* Scale down slightly so long Arabic phrases don't overflow */
+  }
+
+  /* 4. Stop the image from overflowing the phone screen width */
+  img {
+    width: 100%;
+    max-width: 280px; /* Limits how big it gets on mobile */
+    height: 220px;
+    object-fit: cover;
+  }
+}
+
 * {
-  margin: 10px;
+  margin: 0px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -34,6 +84,7 @@ button:active {
   display: flex;
     flex-direction: column;
       align-items: center;
+      gap: 16px;
 
 
 }
