@@ -6,7 +6,7 @@ function clear() {
 
 export function getIconGif(icon, imgElement) {
   fetch(
-    `https://pixabay.com/api/?key=55887891-eb99dd9ab0eecced7f136c7b1&q=${icon}+whether&image_type=photo`,
+    `https://pixabay.com/api/?key=55887891-eb99dd9ab0eecced7f136c7b1&q=${icon}+sky+whether&image_type=photo`,
   )
     .then((response) => response.json())
     .then((result) => {
@@ -21,6 +21,7 @@ export function getIconGif(icon, imgElement) {
 export function renderLoading() {
   clear();
   const loading = document.createElement("div");
+  loading.classList.add("weather");
   loading.textContent = "[جاري التحميل...]";
   // getIconGif("loading", loading);
   container.appendChild(loading);
@@ -34,12 +35,15 @@ export function renderWeather(weatherData) {
 
   // 2. Create FRESH elements every single run
   const aboutLoc = document.createElement("div");
+  aboutLoc.classList.add("weather");
   const aboutCond = document.createElement("div");
   aboutCond.className = "cond";
+  aboutCond.classList.add("weather");
   const aboutIcon = document.createElement("img");
   const aboutAddress = document.createElement("span");
   const aboutTemp = document.createElement("div");
-  aboutTemp.className = "temp";
+  aboutTemp.classList.add("weather", "temp");
+  // aboutTemp.className = ;
 
   // 3. Populate them with data
   aboutAddress.textContent = address;
@@ -60,6 +64,7 @@ export function renderError(error) {
 
   // Create a fresh error div locally
   const errordiv = document.createElement("div");
+  errordiv.classList.add("weather");
   errordiv.textContent = error.message;
 
   container.append(errordiv);

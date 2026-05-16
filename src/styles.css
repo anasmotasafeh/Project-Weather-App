@@ -100,7 +100,7 @@ img {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
-div {
+.weather {
   background-color: white;
   width: min(500px, 90%);
   padding: 18px 24px;
@@ -120,4 +120,8 @@ span {
   font-weight: bold;
   font-size: 1.3rem;
   color: #0984e3;
+}
+
+span{
+  font-size: x-large;
 }
