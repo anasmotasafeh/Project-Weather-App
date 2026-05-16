@@ -6,17 +6,21 @@ const form = document.querySelector("form");
 const locF = form.querySelector("#loc");
 // const loading = document.createElement("img");
 
+locF
+  .addEventListener("invalid", (e) => {
+    locF.setCustomValidity("اكتب مدينه يا ذكي!!!");
+  })
+  .addEventListener("input", (e) => {
+    locF.setCustomValidity("");
+  });
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   renderLoading();
-  // getIconGif("loading", loading);
-  // document.body.appendChild(loading);
   try {
     const weather = await getWeather(locF.value);
-    // document.body.removeChild(loading);
     renderWeather(weather);
   } catch (error) {
-    // document.body.removeChild(loading);
     renderError(error);
   }
 });

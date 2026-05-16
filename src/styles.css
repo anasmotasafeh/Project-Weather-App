@@ -4,6 +4,32 @@
   box-sizing: border-box;
 }
 
+button {
+  padding: 10px 20px;
+  background-color: #0984e3; /* Modern bright blue */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(9, 132, 227, 0.2);
+}
+
+/* When the user hovers over the button */
+button:hover {
+  background-color: #076bba; /* Slightly darker blue */
+  transform: translateY(-2px); /* Lifts the button up slightly */
+  box-shadow: 0 6px 15px rgba(9, 132, 227, 0.3);
+}
+
+/* When the user clicks down on the button */
+button:active {
+  transform: translateY(0); /* Pushes it back down */
+  box-shadow: 0 2px 5px rgba(9, 132, 227, 0.2);
+}
+
 #container{
   display: flex;
     flex-direction: column;

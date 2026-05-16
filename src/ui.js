@@ -17,7 +17,7 @@ export function getIconGif(icon, imgElement) {
 
 export function renderLoading() {
   const loading = document.createElement("div");
-  loading.textContent = "Loading...";
+  loading.textContent = "[جاري التحميل...]";
   // getIconGif("loading", loading);
   container.appendChild(loading);
 }
